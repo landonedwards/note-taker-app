@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>note-taker-app</title>
+    <script type="module" src="/src/main.ts"></script>
+    <link rel="stylesheet" href="/src/style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logoContainer">
+          <h1>NoteTaker</h1>
+          <img src="notebook-icon.png" alt="notetaker logo">
+        </div>
+        <ul class="mainNav">
+          <li><a href="index.html">Write</a></li>
+          <li><a href="stats.html">Saved Notes</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Write A New Note!</h2>
+      <div class="noteSpacingContainer">
+        <div class="newNoteContainer">
+          <input type="text" id="title" placeholder="Title">
+          <textarea id="content" placeholder="Remember to feed the neighborhood rat!"></textarea>
+          <div class="tags">
+            <input type="checkbox" id="workTag" value="work">
+            <label for="workTag">Work</label>
+            <input type="checkbox" id="schoolTag" value="school">
+            <label for="schoolTag">School</label>
+            <input type="checkbox" id="homeTag" value="home">
+            <label for="workTag">Home</label>
+            <input type="checkbox" id="friendsTag" value="friends">
+            <label for="workTag">Friends</label>
+          </div>
+          <div class="saveButtonContainer">
+            <button id="saveNote">Save</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

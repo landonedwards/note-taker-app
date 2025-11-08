@@ -1,0 +1,100 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mainNav {
+  display: flex;
+  justify-content: end;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.mainNav li {
+  list-style: none;
+  padding: 10px;
+}
+
+.mainNav li:hover {
+  background-color: gray;
+}
+
+.mainNav li a {
+  color: white;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 1.1em;
+  margin-left: 5px;
+}
+
+h2 {
+  text-align: center;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(110, 36, 110);
+}
+
+.logoContainer {
+  display: flex;
+}
+
+.logoContainer img {
+  width: 50px;
+}
+
+.noteSpacingContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.newNoteContainer {
+  margin-top: 100px;
+  height: 250px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: lightgray;
+  width: 60%;
+}
+
+.newNoteContainer input::placeholder {
+  font-size: 1.2em;
+}
+
+#content {
+  min-height: 60%;
+}
+
+.tags label {
+  color: purple;
+  font-size: 0.9em;
+}
+
+#saveNote {
+  width: 100px;
+}
+
+.saveButtonContainer {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+}
