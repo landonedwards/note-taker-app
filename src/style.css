@@ -63,7 +63,7 @@ header nav {
   justify-content: center;
 }
 
-.newNoteContainer {
+.newNoteContainer, .modalContent {
   margin-top: 100px;
   height: 250px;
   padding: 15px;
@@ -78,7 +78,7 @@ header nav {
   font-size: 1.2em;
 }
 
-#content {
+#content, #editContent {
   min-height: 60%;
 }
 
@@ -97,4 +97,66 @@ header nav {
   justify-content: center;
   align-items: center;
   min-height: 40px;
+}
+
+#editModal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+  z-index: 999;
+}
+
+.modalContent {
+  transform: scale(0.9);
+  transition: transform .25s ease;
+}
+
+#editModal.show .modalContent {
+  transform: scale(1);
+}
+
+#editModal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#notesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.noteCard {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: rgb(102, 102, 102);
+  max-width: 200px;
+}
+
+.noteHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.deleteBtn {
+  width: 25px;
+  height: 25px;
+}
+
+@media screen and (min-width: 780px) {
+  .newNoteContainer, .modalContent {
+    width: 45%;
+    height: 300px;
+  }
+
+  .noteCard {
+    min-width: 300px;
+  }
 }

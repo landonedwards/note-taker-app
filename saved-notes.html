@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Notes</title>
+    <script type="module" src="/src/notes.ts" defer></script>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+    <header>
+      <nav>
+        <div class="logoContainer">
+          <h1>NoteTaker</h1>
+          <img src="notebook-icon.png" alt="notetaker logo">
+        </div>
+        <ul class="mainNav">
+          <li><a href="index.html">Write</a></li>
+          <li><a href="saved-notes.html">View Notes</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+        <h2>My Notes</h2>
+        <section class="mainContentContainer">
+            <div id="notesList"></div>
+            <div id="filterBar"></div>
+        </section>
+    </main>
+    <footer></footer>
+
+    <div id="editModal" class="modal">
+        <div class="modalContent">
+            <input id="editTitle" type="text" placeholder="Title">
+            <textarea id="editContent" placeholder="Write your note..."></textarea>
+            
+            <div class="tagEdit">
+                <label><input type="checkbox" value="work"> Work</label>
+                <label><input type="checkbox" value="school"> School</label>
+                <label><input type="checkbox" value="home"> Home</label>
+                <label><input type="checkbox" value="friends"> Friends</label>
+            </div>
+
+            <div class="modalButtons">
+                <button id="saveEditBtn">Save</button>
+                <button id="cancelEditBtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
