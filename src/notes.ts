@@ -1,3 +1,4 @@
+import "./style.css";
 import { NoteManager } from "./classes/note-manager.ts";
 
 const manager = new NoteManager();
